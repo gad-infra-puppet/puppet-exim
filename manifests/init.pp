@@ -6,6 +6,9 @@
 #
 # [*mail_relay*]
 #  Mail relay server.
+#  
+# [*local_interfaces*]
+#  Default: 127.0.0.1 ; ::1
 #
 # [*root_email*]
 #  Address to forward root email to. Default: root@DOMAIN
@@ -23,6 +26,7 @@
 #
 class exim (
   $mail_relay = false,
+  $local_interfaces = '127.0.0.1 ; ::1',
   $root_email = "root@${::domain}"
 ) {
 

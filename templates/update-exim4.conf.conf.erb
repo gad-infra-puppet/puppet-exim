@@ -2,7 +2,7 @@
 
 dc_eximconfig_configtype='satellite'
 dc_other_hostnames='<%= @fqdn %>'
-dc_local_interfaces='127.0.0.1 ; ::1'
+dc_local_interfaces='<%= scope.lookupvar('exim::local_interfaces') %>'
 dc_readhost='<%= @fqdn %>'
 dc_relay_domains=''
 dc_minimaldns='false'
