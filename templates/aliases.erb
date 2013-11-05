@@ -14,3 +14,6 @@ noc: root
 security: root
 puppet: root
 root: <%= scope.lookupvar('exim::root_email') %>
+<%- scope.lookupvar('exim::alias_map').each do |k,v| -%>
+<%= k %>: <%= v %>
+<%- end -%>

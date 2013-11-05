@@ -27,7 +27,8 @@
 class exim (
   $mail_relay = false,
   $local_interfaces = '127.0.0.1 ; ::1',
-  $root_email = "root@${::domain}"
+  $root_email = "root@${::domain}",
+  $alias_map  = {},
 ) {
 
   # Module compatibility check
